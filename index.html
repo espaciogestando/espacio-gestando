@@ -514,6 +514,102 @@
     margin-bottom:8px;
     padding:0;
   }
+  .prof-axes-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+    margin-top:8px;
+  }
+  .prof-axis{
+    text-align:center;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:32px 22px;
+  }
+  .prof-axis-icon{
+    display:flex;
+    justify-content:center;
+    margin-bottom:16px;
+    color:var(--gold);
+  }
+  .prof-axis-icon svg{width:30px;height:30px;}
+  .prof-axis h3{
+    font-size:1.02rem;
+    margin-bottom:8px;
+    padding:0;
+  }
+  .prof-axis p{
+    font-size:0.86rem;
+    color:var(--ink);
+    opacity:0.78;
+    line-height:1.55;
+  }
+  .prof-axis-link{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+    transition:transform .2s, box-shadow .2s;
+  }
+  .prof-axis-link:hover{
+    transform:translateY(-3px);
+    box-shadow:0 14px 26px rgba(43,47,36,0.1);
+  }
+  .prof-axis-cta{
+    display:block;
+    margin-top:14px;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.7rem;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+
+  .prof-cta-banner{
+    margin-top:44px;
+    background:linear-gradient(120deg, var(--sage-deep), var(--sage));
+    border-radius:20px;
+    padding:48px 44px;
+    color:var(--bg);
+  }
+  .prof-cta-banner h3{
+    font-size:1.3rem;
+    color:var(--bg);
+    max-width:600px;
+    margin-bottom:16px;
+    padding:0;
+  }
+  .prof-cta-banner p{
+    font-size:0.94rem;
+    opacity:0.9;
+    max-width:600px;
+    line-height:1.6;
+    margin-bottom:22px;
+  }
+  .prof-cta-list{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 14px;
+    margin-bottom:28px;
+    padding:0;
+  }
+  .prof-cta-list li{
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.74rem;
+    letter-spacing:0.02em;
+    background:rgba(238,238,225,0.14);
+    border:1px solid rgba(238,238,225,0.3);
+    border-radius:20px;
+    padding:7px 16px;
+  }
+  .prof-cta-btn{
+    background:var(--gold);
+    color:var(--sage-deep);
+    font-weight:600;
+    display:inline-block;
+  }
+
   .recurso-soon{
     font-family:'JetBrains Mono', monospace;
     font-size:0.66rem;
@@ -1194,6 +1290,7 @@
     .pillars{grid-template-columns:repeat(2,1fr);}
     .category-grid{grid-template-columns:1fr;}
     .recurso-items{grid-template-columns:1fr;}
+    .prof-axes-grid{grid-template-columns:1fr;}
     .recurso-items-4{grid-template-columns:repeat(2,1fr);}
     .id-pillars{grid-template-columns:1fr; gap:32px;}
     .origen-content{flex-direction:column; align-items:center; text-align:center;}
@@ -1243,7 +1340,7 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Espacio Gestando",
-  "description": "Psicólogas con formación en Psicología Perinatal y Primera Infancia. Acompañamos a personas y familias en cada etapa del camino perinatal: búsqueda, embarazo, puerperio, crianza temprana y duelo.",
+  "description": "Psicólogas con formación en Psicología Perinatal y de la Primera Infancia. Acompañamos a personas y familias en cada etapa del camino perinatal: búsqueda, embarazo, puerperio, crianza temprana y duelo.",
   "url": "https://espaciogestando.com",
   "telephone": "+5492473457690",
   "email": "hola@espaciogestando.com",
@@ -1298,7 +1395,7 @@
       <span class="eyebrow">Psicología Perinatal y de la Primera Infancia</span>
       <h1>Un lugar para atravesar el <em>camino perinatal</em>, con acompañamiento profesional y respetuoso.</h1>
       <p class="lead">Buscar un embarazo. Atravesar un tratamiento de fertilidad. Parir. Criar en esos primeros años tan intensos. Transitar un duelo perinatal. Cada experiencia pide su propio espacio — en Espacio Gestando lo construimos con vos.</p>
-      <p class="trust-line">Psicólogas con formación en Psicología Perinatal y Primera Infancia<br>Atención presencial y online</p>
+      <p class="trust-line">Psicólogas con formación en Psicología Perinatal y de la Primera Infancia<br>Atención presencial y online</p>
       <div class="hero-ctas">
         <a href="#familias" class="btn btn-primary">Encontrar mi espacio</a>
         <a href="#profesionales" class="btn btn-ghost">Soy profesional o institución</a>
@@ -1430,35 +1527,46 @@
     <div class="wrap">
       <div class="section-head reveal">
         <span class="eyebrow">Para profesionales</span>
-        <h2>Un espacio de intercambio clínico y teórico.</h2>
-        <p>Para profesionales que trabajan o quieren formarse en Psicología Perinatal y de la Primera Infancia.</p>
+        <h2>Una comunidad que se construye entre todos.</h2>
+        <p>Gestando también quiere ser un punto de encuentro para quienes trabajan en el campo de la perinatalidad y la primera infancia — un lugar al que valga la pena volver. Artículos, recursos, formación y espacios de intercambio, pensados para construirse en diálogo con quienes ya forman parte de este campo.</p>
       </div>
 
-      <div class="prof-grid" style="display:block; max-width:640px;">
-        <ul class="prof-list reveal">
-          <li>
-            <span class="mark">→</span>
-            <div>
-              <h4>Formación y capacitación</h4>
-              <p>Estamos desarrollando una propuesta de formación para profesionales que trabajan en perinatalidad. Próximamente vamos a compartir los detalles.</p>
-            </div>
-          </li>
-          <li>
-            <span class="mark">→</span>
-            <div>
-              <h4>Red profesional</h4>
-              <p>Un punto de encuentro entre colegas para pensar juntos la práctica clínica en perinatalidad.</p>
-            </div>
-          </li>
-          <li>
-            <span class="mark">→</span>
-            <div>
-              <h4>Espacios de intercambio clínico <span style="opacity:0.6; font-style:italic;">(Próximamente)</span></h4>
-              <p>Instancias de supervisión y de intercambio sobre la práctica clínica, entre pares. Si te interesa ser parte, escribinos.</p>
-            </div>
-          </li>
+      <div class="prof-axes-grid">
+        <a href="#recursos" onclick="showView(event,'recursos-view')" class="prof-axis prof-axis-link reveal">
+          <span class="prof-axis-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8 8h8"/><path d="M8 12h8"/><path d="M8 16h5"/></svg>
+          </span>
+          <h3>Contenidos y recursos</h3>
+          <p>Artículos y materiales para seguir profundizando en perinatalidad y primera infancia.</p>
+          <span class="prof-axis-cta">Ver recursos →</span>
+        </a>
+        <div class="prof-axis reveal">
+          <span class="prof-axis-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5c2.2-1.2 5.2-1.1 8 1 2.8-2.1 5.8-2.2 8-1v13c-2.2-1.2-5.2-1.1-8 1-2.8-2.1-5.8-2.2-8-1v-13z"/><path d="M12 6.5V19"/></svg>
+          </span>
+          <h3>Formación</h3>
+          <p>Cursos, talleres y propuestas de actualización profesional, pensados para acompañar la práctica clínica.</p>
+        </div>
+        <div class="prof-axis reveal">
+          <span class="prof-axis-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="6.2"/><circle cx="15" cy="12" r="6.2"/></svg>
+          </span>
+          <h3>Comunidad</h3>
+          <p>Un espacio para encontrarnos entre profesionales, compartir experiencias y pensar la práctica de manera colectiva.</p>
+        </div>
+      </div>
+
+      <div class="prof-cta-banner reveal">
+        <h3>Las mejores conversaciones nunca las hace una sola persona.</h3>
+        <p>En Espacio Gestando creemos que el conocimiento se enriquece cuando circula, se comparte y se pone en diálogo. Por eso queremos construir una comunidad donde los profesionales no solo encuentren recursos y formación, sino también un lugar para escribir, enseñar, aprender y crear proyectos junto a otros.</p>
+        <ul class="prof-cta-list">
+          <li>Escribir un artículo</li>
+          <li>Proponer una capacitación o taller</li>
+          <li>Compartir recursos</li>
+          <li>Impulsar proyectos colaborativos</li>
+          <li>Postularte para formar parte del equipo de Espacio Gestando</li>
         </ul>
-        <a href="https://wa.me/5492473457690?text=Hola%2C%20soy%20profesional%20y%20quiero%20saber%20m%C3%A1s%20sobre%20este%20espacio." target="_blank" rel="noopener" class="btn btn-ghost" style="margin-top:24px;">Quiero hacer una consulta</a>
+        <a href="https://wa.me/5492473457690?text=Hola%2C%20soy%20profesional%20y%20quiero%20sumarme%20a%20la%20comunidad%20de%20Espacio%20Gestando." target="_blank" rel="noopener" class="btn prof-cta-btn">Quiero sumarme</a>
       </div>
     </div>
   </section>
@@ -1743,7 +1851,7 @@
             <span class="recurso-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5c2.2-1.2 5.2-1.1 8 1 2.8-2.1 5.8-2.2 8-1v13c-2.2-1.2-5.2-1.1-8 1-2.8-2.1-5.8-2.2-8-1v-13z"/><path d="M12 6.5V19"/></svg>
             </span>
-            <h3>Libros recomendados</h3>
+            <h3>Lecturas recomendadas</h3>
             <span class="recurso-soon">Próximamente</span>
           </div>
           <div class="recurso-item">
