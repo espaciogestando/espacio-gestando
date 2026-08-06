@@ -743,6 +743,23 @@
     opacity:0.85;
     line-height:1.6;
   }
+  .faq-more{
+    margin-top:24px;
+    text-align:center;
+  }
+  .faq-more p{
+    font-size:0.9rem;
+    color:var(--sage-deep);
+    opacity:0.7;
+    margin-bottom:6px;
+  }
+  .faq-more-link{
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.82rem;
+    color:var(--gold);
+    text-decoration:none;
+  }
+  .faq-more-link:hover{text-decoration:underline;}
 
   .orient-banner{
     margin-top:32px;
@@ -1371,12 +1388,11 @@
       </span>
     </div>
     <div class="navlinks" id="navlinks">
-      <a href="#sobre" onclick="showHome(event,'sobre')">Quiénes somos</a>
+      <a href="#" onclick="showHome(event)">Inicio</a>
       <a href="#familias" onclick="showHome(event,'familias')">Familias</a>
-      <a href="#profesionales" onclick="showHome(event,'profesionales')">Profesionales</a>
-      <a href="#relatos" onclick="showRelatos(event)">Relatos de Parto</a>
-      <a href="#recursos" onclick="showView(event,'recursos-view')">Recursos</a>
-      <a href="#faq" onclick="showHome(event,'faq')">Preguntas frecuentes</a>
+      <a href="#comunidad" onclick="showView(event,'comunidad-view')">Comunidad</a>
+      <a href="#organizaciones" onclick="showView(event,'organizaciones-view')">Organizaciones</a>
+      <a href="#relatos" onclick="showRelatos(event)">Relatos</a>
       <a href="#contacto" onclick="showHome(event,'contacto')">Contacto</a>
     </div>
     <button type="button" id="menu-toggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
@@ -1492,12 +1508,6 @@
         <p>Contanos brevemente qué te pasa y te ayudamos a encontrar el espacio adecuado. Sin compromiso.</p>
         <a href="https://wa.me/5492473457690?text=Hola%2C%20no%20s%C3%A9%20bien%20qu%C3%A9%20espacio%20de%20Espacio%20Gestando%20es%20para%20m%C3%AD.%20%C2%BFPodemos%20charlar%3F" target="_blank" rel="noopener" class="btn btn-primary">Hablemos</a>
       </div>
-
-      <div class="pro-banner reveal">
-        <h3>¿Sos profesional o representás una organización?</h3>
-        <p>También ofrecemos espacios de formación y asesoramiento.</p>
-        <a href="#" onclick="showView(event,'formacion-view')" class="btn btn-ghost">Conocer propuestas para profesionales</a>
-      </div>
     </div>
   </section>
 
@@ -1518,55 +1528,6 @@
           <p>Lo último que compartimos en Instagram, y las guías y materiales que estamos preparando.</p>
         </div>
         <a href="#recursos" class="btn btn-ghost" onclick="showView(event,'recursos-view')">Explorar recursos</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROFESIONALES -->
-  <section id="profesionales">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Para profesionales</span>
-        <h2>Una comunidad que se construye entre todos.</h2>
-        <p>Gestando también quiere ser un punto de encuentro para quienes trabajan en el campo de la perinatalidad y la primera infancia — un lugar al que valga la pena volver. Artículos, recursos, formación y espacios de intercambio, pensados para construirse en diálogo con quienes ya forman parte de este campo.</p>
-      </div>
-
-      <div class="prof-axes-grid">
-        <a href="#recursos" onclick="showView(event,'recursos-view')" class="prof-axis prof-axis-link reveal">
-          <span class="prof-axis-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8 8h8"/><path d="M8 12h8"/><path d="M8 16h5"/></svg>
-          </span>
-          <h3>Contenidos y recursos</h3>
-          <p>Artículos y materiales para seguir profundizando en perinatalidad y primera infancia.</p>
-          <span class="prof-axis-cta">Ver recursos →</span>
-        </a>
-        <div class="prof-axis reveal">
-          <span class="prof-axis-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5c2.2-1.2 5.2-1.1 8 1 2.8-2.1 5.8-2.2 8-1v13c-2.2-1.2-5.2-1.1-8 1-2.8-2.1-5.8-2.2-8-1v-13z"/><path d="M12 6.5V19"/></svg>
-          </span>
-          <h3>Formación</h3>
-          <p>Cursos, talleres y propuestas de actualización profesional, pensados para acompañar la práctica clínica.</p>
-        </div>
-        <div class="prof-axis reveal">
-          <span class="prof-axis-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="6.2"/><circle cx="15" cy="12" r="6.2"/></svg>
-          </span>
-          <h3>Comunidad</h3>
-          <p>Un espacio para encontrarnos entre profesionales, compartir experiencias y pensar la práctica de manera colectiva.</p>
-        </div>
-      </div>
-
-      <div class="prof-cta-banner reveal">
-        <h3>Las mejores conversaciones nunca las hace una sola persona.</h3>
-        <p>En Espacio Gestando creemos que el conocimiento se enriquece cuando circula, se comparte y se pone en diálogo. Por eso queremos construir una comunidad donde los profesionales no solo encuentren recursos y formación, sino también un lugar para escribir, enseñar, aprender y crear proyectos junto a otros.</p>
-        <ul class="prof-cta-list">
-          <li>Escribir un artículo</li>
-          <li>Proponer una capacitación o taller</li>
-          <li>Compartir recursos</li>
-          <li>Impulsar proyectos colaborativos</li>
-          <li>Postularte para formar parte del equipo de Espacio Gestando</li>
-        </ul>
-        <a href="https://wa.me/5492473457690?text=Hola%2C%20soy%20profesional%20y%20quiero%20sumarme%20a%20la%20comunidad%20de%20Espacio%20Gestando." target="_blank" rel="noopener" class="btn prof-cta-btn">Quiero sumarme</a>
       </div>
     </div>
   </section>
@@ -1599,28 +1560,20 @@
       <div class="faq-list">
         <details class="faq-item reveal">
           <summary>¿Cómo es la primera consulta?</summary>
-          <p>Podés escribirnos por WhatsApp, completar el formulario de contacto, o mandarnos un mensaje por Instagram o mail — como te resulte más cómodo. Ahí coordinamos el primer encuentro, presencial u online.</p>
+          <p>La primera consulta es un espacio para conocernos, escuchar qué estás atravesando y pensar juntas qué tipo de acompañamiento puede ser adecuado para vos.</p>
         </details>
         <details class="faq-item reveal">
           <summary>¿Atienden de forma presencial y online?</summary>
-          <p>Sí, ofrecemos las dos modalidades. Vos elegís la que mejor se adapte a tu momento.</p>
-        </details>
-        <details class="faq-item reveal">
-          <summary>¿Puedo hacer terapia con ustedes si mi motivo de consulta no es perinatal?</summary>
-          <p>Sí. Nuestro foco está puesto en el proceso perinatal y la primera infancia, pero eso no es lo único que trabajamos. Escribinos y lo charlamos: si hay algo que no podamos acompañar, te ayudamos a encontrar quién sí pueda hacerlo.</p>
+          <p>Sí. Ofrecemos atención presencial y online. Podemos conversar cuál modalidad se adapta mejor a tu situación.</p>
         </details>
         <details class="faq-item reveal">
           <summary>¿Puedo empezar en cualquier momento del proceso?</summary>
-          <p>Sí. No hace falta estar en una etapa particular — podés acercarte durante la búsqueda, el embarazo, el puerperio, la crianza o frente a un duelo perinatal.</p>
+          <p>Sí. Podés acercarte durante la búsqueda de un embarazo, un tratamiento de fertilidad, el embarazo, el puerperio, la crianza o frente a un duelo perinatal — no hace falta esperar un momento en particular para pedir acompañamiento.</p>
         </details>
-        <details class="faq-item reveal">
-          <summary>¿Trabajan con obra social?</summary>
-          <p>Escribinos por WhatsApp y lo conversamos — cada situación es distinta.</p>
-        </details>
-        <details class="faq-item reveal">
-          <summary>¿Es confidencial lo que hablamos en las sesiones?</summary>
-          <p>Sí. El secreto profesional es un principio ético básico de la psicología: todo lo que se comparte, ya sea en sesiones individuales o en encuentros y talleres grupales, queda resguardado.</p>
-        </details>
+      </div>
+      <div class="faq-more reveal">
+        <p>¿Tenés otra pregunta?</p>
+        <a href="#" onclick="showView(event,'faq-view')" class="faq-more-link">Ver todas las preguntas frecuentes →</a>
       </div>
     </div>
   </section>
@@ -1758,12 +1711,12 @@
 </div>
 
 <!-- VISTA: FORMACIÓN Y ASESORAMIENTO -->
-<div id="formacion-view" style="display:none;">
+<div id="organizaciones-view" style="display:none;">
   <section>
     <div class="wrap">
-      <a href="#" onclick="showHome(event,'familias')" class="back-link">&larr; Volver al inicio</a>
+      <a href="#" onclick="showHome(event)" class="back-link">&larr; Volver al inicio</a>
       <div class="section-head reveal in">
-        <span class="eyebrow">Formación y asesoramiento</span>
+        <span class="eyebrow">Organizaciones</span>
         <h2>Llevamos la mirada perinatal más allá del consultorio.</h2>
         <p>Espacio Gestando también camina junto a organizaciones, instituciones y profesionales que quieren sumar una mirada perinatal a su trabajo — porque esta red se construye entre todas y todos.</p>
       </div>
@@ -1780,24 +1733,72 @@
           <p>Talleres, cursos y experiencias de aprendizaje para organizaciones y profesionales interesados en profundizar su mirada perinatal.</p>
           <a href="https://wa.me/5492473457690?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%20las%20propuestas%20de%20formaci%C3%B3n%20de%20Espacio%20Gestando." target="_blank" rel="noopener" class="pillar-cta">Descubrir las capacitaciones</a>
         </div>
-        <a href="#" onclick="showHome(event,'profesionales')" class="pillar reveal in" style="text-decoration:none; color:inherit; cursor:pointer;">
-          <span class="stage-tag">Comunidad</span>
-          <h3>Comunidad profesional</h3>
-          <p>Un espacio abierto para encontrarnos entre colegas, compartir artículos, producir conocimiento, acceder a recursos, participar de formaciones y construir proyectos colaborativos.</p>
-          <span class="pillar-cta">Conocer la comunidad →</span>
-        </a>
       </div>
     </div>
   </section>
 </div>
 
-<!-- VISTA: RECURSOS -->
-<div id="recursos-view" style="display:none;">
+<!-- VISTA: COMUNIDAD (fusiona Para profesionales + Recursos) -->
+<div id="comunidad-view" style="display:none;">
   <section>
     <div class="wrap">
       <a href="#" onclick="showHome(event)" class="back-link">&larr; Volver al inicio</a>
 
       <div class="section-head reveal in">
+        <span class="eyebrow">Para profesionales</span>
+        <h2>Una comunidad que se construye entre todos.</h2>
+        <p>Gestando también quiere ser un punto de encuentro para quienes trabajan en el campo de la perinatalidad y la primera infancia — un lugar al que valga la pena volver. Artículos, recursos, formación y espacios de intercambio, pensados para construirse en diálogo con quienes ya forman parte de este campo.</p>
+      </div>
+
+      <div class="prof-axes-grid">
+        <a href="#" onclick="showView(event,'recursos-view')" class="prof-axis prof-axis-link reveal in">
+          <span class="prof-axis-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3.5" width="14" height="17" rx="1.5"/><path d="M8 8h8"/><path d="M8 12h8"/><path d="M8 16h5"/></svg>
+          </span>
+          <h3>Contenidos y recursos</h3>
+          <p>Artículos y materiales para seguir profundizando en perinatalidad y primera infancia.</p>
+          <span class="prof-axis-cta">Ver recursos →</span>
+        </a>
+        <div class="prof-axis reveal in">
+          <span class="prof-axis-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5c2.2-1.2 5.2-1.1 8 1 2.8-2.1 5.8-2.2 8-1v13c-2.2-1.2-5.2-1.1-8 1-2.8-2.1-5.8-2.2-8-1v-13z"/><path d="M12 6.5V19"/></svg>
+          </span>
+          <h3>Formación</h3>
+          <p>Cursos, talleres y propuestas de actualización profesional, pensados para acompañar la práctica clínica.</p>
+        </div>
+        <div class="prof-axis reveal in">
+          <span class="prof-axis-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="6.2"/><circle cx="15" cy="12" r="6.2"/></svg>
+          </span>
+          <h3>Comunidad</h3>
+          <p>Un espacio para encontrarnos entre profesionales, compartir experiencias y pensar la práctica de manera colectiva.</p>
+        </div>
+      </div>
+
+      <div class="prof-cta-banner reveal in">
+        <h3>Las mejores conversaciones nunca las hace una sola persona.</h3>
+        <p>En Espacio Gestando creemos que el conocimiento se enriquece cuando circula, se comparte y se pone en diálogo. Por eso queremos construir una comunidad donde los profesionales no solo encuentren recursos y formación, sino también un lugar para escribir, enseñar, aprender y crear proyectos junto a otros.</p>
+        <ul class="prof-cta-list">
+          <li>Escribir un artículo</li>
+          <li>Proponer una capacitación o taller</li>
+          <li>Compartir recursos</li>
+          <li>Impulsar proyectos colaborativos</li>
+          <li>Postularte para formar parte del equipo de Espacio Gestando</li>
+        </ul>
+        <a href="https://wa.me/5492473457690?text=Hola%2C%20soy%20profesional%20y%20quiero%20sumarme%20a%20la%20comunidad%20de%20Espacio%20Gestando." target="_blank" rel="noopener" class="btn prof-cta-btn">Quiero sumarme</a>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- VISTA: RECURSOS (público general) -->
+<div id="recursos-view" style="display:none;">
+  <section>
+    <div class="wrap">
+      <a href="#" onclick="showHome(event)" class="back-link">&larr; Volver al inicio</a>
+
+      <div id="recursos-posts" class="section-head reveal in">
         <span class="eyebrow">Instagram</span>
         <h2>Lo último que compartimos.</h2>
         <p>Una muestra de los temas que trabajamos en Espacio Gestando.</p>
@@ -1883,6 +1884,46 @@
           <input type="email" name="email" placeholder="tu@mail.com" required>
           <button type="submit">Avisenme</button>
         </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- VISTA: PREGUNTAS FRECUENTES (página completa) -->
+<div id="faq-view" style="display:none;">
+  <section>
+    <div class="wrap">
+      <a href="#" onclick="showHome(event)" class="back-link">&larr; Volver al inicio</a>
+
+      <div class="section-head reveal in">
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2>Todo lo que quizás quieras saber.</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item reveal in">
+          <summary>¿Cómo es la primera consulta?</summary>
+          <p>La primera consulta es un espacio para conocernos, escuchar qué estás atravesando y pensar juntas qué tipo de acompañamiento puede ser adecuado para vos.</p>
+        </details>
+        <details class="faq-item reveal in">
+          <summary>¿Atienden de forma presencial y online?</summary>
+          <p>Sí. Ofrecemos atención presencial y online. Podemos conversar cuál modalidad se adapta mejor a tu situación.</p>
+        </details>
+        <details class="faq-item reveal in">
+          <summary>¿Tengo que estar atravesando una situación perinatal para consultar?</summary>
+          <p>Nuestro trabajo está centrado en la Psicología Perinatal y la Primera Infancia. Si tu consulta se relaciona con ese recorrido, este es tu espacio. Si no estás segura, escribinos y lo conversamos — si no es lo que buscás, te podemos orientar hacia quien sí pueda acompañarte.</p>
+        </details>
+        <details class="faq-item reveal in">
+          <summary>¿Puedo empezar en cualquier momento del proceso?</summary>
+          <p>Sí. Podés acercarte durante la búsqueda de un embarazo, un tratamiento de fertilidad, el embarazo, el puerperio, la crianza o frente a un duelo perinatal — no hace falta esperar un momento en particular para pedir acompañamiento.</p>
+        </details>
+        <details class="faq-item reveal in">
+          <summary>¿Trabajan con obra social?</summary>
+          <p>Escribinos por WhatsApp y lo conversamos — cada situación es distinta.</p>
+        </details>
+        <details class="faq-item reveal in">
+          <summary>¿Es confidencial lo que hablamos en las sesiones?</summary>
+          <p>Sí. El secreto profesional es un principio ético básico de la psicología: todo lo que se comparte, ya sea en sesiones individuales o en encuentros y talleres grupales, queda resguardado.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -2052,7 +2093,7 @@
     }
   }
 
-  const secondaryViews = ['relatos-view','individual-view','grupal-view','formacion-view','recursos-view'];
+  const secondaryViews = ['relatos-view','individual-view','grupal-view','organizaciones-view','comunidad-view','recursos-view','faq-view'];
 
   function hideAllViews(){
     secondaryViews.forEach(id=>{
