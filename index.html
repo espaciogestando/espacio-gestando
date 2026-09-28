@@ -1474,7 +1474,7 @@
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Colón",
-    "addressRegion": "Santa Fe",
+    "addressRegion": "Buenos Aires",
     "addressCountry": "AR"
   },
   "areaServed": "AR",
@@ -1554,7 +1554,7 @@
           <h3>Eugenia Biancotti</h3>
           <span class="role">M.P. 15884</span>
           <p class="specialty">Psicóloga especializada en Psicología Perinatal y de la Primera Infancia</p>
-          <p>Psicóloga y Profesora en Psicología. Diplomada en Salud Perinatal y Puericultora. Formada en Clínica Psicoanalítica con Niños y Niñas y en Psicología Perinatal y de la Primera Infancia, actualmente en etapa de elaboración de tesis.</p>
+          <p>Psicóloga y Profesora en Psicología. Diplomada en Salud Perinatal. Puericultora. Formada en Clínica Psicoanalítica con Niños y Niñas y en Psicología Perinatal y de la Primera Infancia.</p>
           <p class="person-note">Integra la Comisión Provincial de Psicología Perinatal y de la Primera Infancia.</p>
         </div>
         <div class="person reveal">
@@ -1625,7 +1625,7 @@
         </details>
         <details class="faq-item reveal">
           <summary>¿Atienden de forma presencial y online?</summary>
-          <p>Sí. Ofrecemos atención presencial y online. Podemos conversar cuál modalidad se adapta mejor a tu situación.</p>
+          <p>Sí. Ofrecemos atención presencial y online. Podemos conversar cuál modalidad se adapta mejor a tu situación. Si vivís fuera de Argentina, conocé <a href="/maternar-lejos">Maternar lejos</a>, el acompañamiento online para familias que crían lejos de casa.</p>
         </details>
         <details class="faq-item reveal">
           <summary>¿Puedo empezar en cualquier momento del proceso?</summary>
@@ -1728,6 +1728,12 @@
           <p>Un encuentro prenatal para prepararte antes del nacimiento.</p>
           <span class="category-cta">Conocer la propuesta →</span>
         </a>
+      </div>
+
+      <div class="pro-banner reveal in">
+        <h3>¿Vivís fuera de tu país?</h3>
+        <p>Acompañamiento psicológico online, en español, para quienes atraviesan el embarazo, el posparto y la crianza lejos de casa.</p>
+        <a href="/maternar-lejos" class="btn btn-ghost">Conocer Maternar lejos</a>
       </div>
 
       <div class="orient-banner reveal in">
@@ -2126,7 +2132,7 @@
         </details>
         <details class="faq-item reveal in">
           <summary>¿Atienden de forma presencial y online?</summary>
-          <p>Sí. Ofrecemos atención presencial y online. Podemos conversar cuál modalidad se adapta mejor a tu situación.</p>
+          <p>Sí. Ofrecemos atención presencial y online. Podemos conversar cuál modalidad se adapta mejor a tu situación. Si vivís fuera de Argentina, conocé <a href="/maternar-lejos">Maternar lejos</a>, el acompañamiento online para familias que crían lejos de casa.</p>
         </details>
         <details class="faq-item reveal in">
           <summary>¿Tengo que estar atravesando una situación perinatal para consultar?</summary>
@@ -2477,6 +2483,18 @@
   }
 
   initJourneyLine();
+
+  // Abrir la vista que indique la URL (ej.: /#familias desde otras páginas)
+  (function openFromHash(){
+    const map = {
+      '#familias':'familias-view', '#comunidad':'comunidad-view',
+      '#organizaciones':'organizaciones-view', '#relatos':'relatos-view',
+      '#preguntas':'faq-view'
+    };
+    const h = window.location.hash;
+    if(map[h]) showView(null, map[h]);
+    else if(h === '#contacto') showHome(null, 'contacto');
+  })();
 </script>
 
 </body>
